@@ -26,7 +26,17 @@
 int compare(TYPE left, TYPE right)
 {
     /*FIXME: write this*/
-	return 0;
+	struct data *LEFT = (struct data *)left;
+	struct data *RIGHT = (struct data *)right;
+	if(LEFT->number < RIGHT->number){
+		return 1;
+	}
+	else if (LEFT->number > RIGHT->number){
+		return -1;
+	}
+	else {
+		return 0;
+	}
 
 }
 
@@ -34,7 +44,7 @@ int compare(TYPE left, TYPE right)
 void print_type(TYPE curval)
 {
     /*FIXME: write this*/
+    struct data *n = (struct data *)curval;
+    printf("%d", n->number );
 
 }
-
-
